@@ -12,9 +12,9 @@ namespace customselection {
     export function ss(s: string, s2: string): void {
         scene.createRenderable(10, function (target, camera) {
             if (hit === 0) {
-                target.print(s, 6, 96, 1);
-                target.print(s2, 106, 96, 1);
-                target.print("Press A to start", 32, 56, 1);
+                target.print(s, screen.width / 2 - 70, screen.height/2 - -20, 1);
+                target.print(s2,screen.width/2 + 25, screen.height/2 - -20, 1);
+                target.print("Press A to start", screen.width / 2 - 50, screen.height / 2 - 20, 1);
 
                 let textwidth = s.length + s.length + 10;
                 let textwidth2 = s2.length + s2.length + 10;
@@ -24,11 +24,11 @@ namespace customselection {
                 // Change the selection box based on the selected player
                 if (selectedPlayer === 1) {
                     if (rv === true) {
-                        target.drawRect(6 - padding, 96 - padding, textwidth + (1.3 * s.length * padding), textheight + (1.7 * padding), color);
+                        target.drawRect(screen.width / 2 - 70 - padding, screen.height / 2 + 20 - padding, textwidth + (1.3 * s.length * padding), textheight + (1.7 * padding), color);
                     }
                 } else if (selectedPlayer === 2) {
                     if (rv === true) {
-                        target.drawRect(106 - padding, 96 - padding, textwidth2 + (1.3 * s2.length * padding), textheight + (1.7 * padding), color);
+                        target.drawRect(screen.width / 2 + 25 - padding, screen.height / 2 + 20 - padding, textwidth2 + (1.3 * s2.length * padding), textheight + (1.7 * padding), color);
                     }
                 }
             }
@@ -59,10 +59,10 @@ namespace customselection {
         export function cs(s: string, s2: string, s3: string): void {
             scene.createRenderable(10, function (target, camera) {
                 if (hit === 0) {
-                target.print(s, 60, 70, 1);
-                target.print(s2, 60, 86, 1);
-                target.print("Press A to start", 32, 46, 1);
-                target.print(s3, 60, 101, 1)
+                target.print(s, screen.width / 2 - 30, screen.height / 2 - 0, 1);
+                target.print(s2, screen.width / 2 - 30, screen.height / 2 - -20, 1);
+                    target.print("Press A to start", screen.width / 2 - 50, screen.height / 2 - 20, 1);
+                target.print(s3, screen.width / 2 - 30, screen.height / 2 - -40, 1)
 
                 let textwidth = s.length + s.length + 10;
                 let textwidth2 = s2.length + s2.length + 10;
@@ -73,21 +73,21 @@ namespace customselection {
                 // Change the selection box based on the selected player
                 if (selectedPlayer === 1) {
                     if (rv === true && textwidth < 1) {
-                        target.drawRect(60 - padding, 70 - padding, textwidth + (1.5 - s.length * padding), textheight + (1.7 * padding), color);
+                        target.drawRect(screen.width / 2 - 30, screen.height / 2 - 0, textwidth + (1.5 - s.length * padding), textheight + (1.7 * padding), color);
                     } else if (rv === true && textwidth > 1) {
-                        target.drawRect(60 - padding, 70 - padding, textwidth + (5 + s.length * padding), textheight + (1.7 * padding), color);
+                        target.drawRect(screen.width / 2 - 33, screen.height / 2 - 3, textwidth + (5 + s.length * padding), textheight + (1.7 * padding), color);
                     }
                 } else if (selectedPlayer === 2) {
                     if (rv === true && textwidth2 < 1) {
-                        target.drawRect(60 - padding, 86 - padding, textwidth2 + (1.5 - s2.length * padding), textheight + (1.7 * padding), color);
+                        target.drawRect(screen.width / 2 - 33, screen.height / 2 + 17, textwidth2 + (1.5 - s2.length * padding), textheight + (1.7 * padding), color);
                     } else if (rv === true && textwidth2 > 1) {
-                        target.drawRect(60 - padding, 86 - padding, textwidth2 + (5 + s2.length * padding), textheight + (1.7 * padding), color);
+                        target.drawRect(screen.width / 2 - 33, screen.height / 2 + 17, textwidth2 + (5 + s2.length * padding), textheight + (1.7 * padding), color);
                     }
                 } else if (selectedPlayer === 3) {
                     if (rv === true && textwidth3 < 1) {
-                        target.drawRect(60 - padding, 101 - padding, textwidth3 + (1.5 - s3.length * padding), textheight + (1.7 * padding), color)
+                        target.drawRect(screen.width / 2 - 33, screen.height / 2 + 37, textwidth3 + (1.5 - s3.length * padding), textheight + (1.7 * padding), color)
                     } else if (rv === true && textwidth3 > 1) {
-                        target.drawRect(60 - padding, 101 - padding, textwidth3 + (5 + s3.length * padding), textheight + (1.7 * padding), color)
+                        target.drawRect(screen.width / 2 - 33, screen.height / 2 + 37, textwidth3 + (5 + s3.length * padding), textheight + (1.7 * padding), color)
                     }
                 }
                 }
@@ -155,4 +155,5 @@ namespace customselection {
             }
         })
     }
+
 }

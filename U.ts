@@ -12,9 +12,9 @@ namespace screenselection {
     export function ss(): void {
         scene.createRenderable(10, function (target, camera) {
             if (hit === 0) {
-            target.print("1 Player", 6, 96, 1);
-            target.print("2 Player", 106, 96, 1);
-            target.print("Press A to start", 32, 56, 1);
+            target.print("1 Player",screen.width/2 - 70, screen.height/2 - -20, 1);
+            target.print("2 Player",screen.width/2 + 25, screen.height/2 - -20, 1);
+            target.print("Press A to start", screen.width/2 - 50, screen.height/2 - 20, 1);
 
             let textwidth = "1 Player".length * 6.5;
             let textheight = 8;
@@ -23,11 +23,11 @@ namespace screenselection {
             // Change the selection box based on the selected player
             if (selectedPlayer === 1) {
                 if (rv === true) {
-                    target.drawRect(6 - padding, 96 - padding, textwidth + (1.5 * padding), textheight + (1.7 * padding), color);
+                    target.drawRect(screen.width/2 - 70 - padding, screen.height/2 + 20 - padding, textwidth + (1.5 * padding), textheight + (1.7 * padding), color);
                 }
             } else if (selectedPlayer === 2) {
                 if (rv === true) {
-                    target.drawRect(106 - padding, 96 - padding, textwidth + (1.5 * padding), textheight + (1.7 * padding), color);
+                    target.drawRect(screen.width/2 + 25 - padding, screen.height/2 + 20 - padding, textwidth + (1.5 * padding), textheight + (1.7 * padding), color);
                 }
             }
             }
@@ -63,9 +63,9 @@ color = c
     export function ssss(): void {
         scene.createRenderable(10, function (target, camera) {
             if (hit === 0) {
-            target.print("1 Player", 60, 80, 1);
-            target.print("2 Player", 60, 96, 1);
-            target.print("Press A to start", 32, 56, 1);
+            target.print("1 Player", screen.width/2 - 30, screen.height/2 - 0, 1);
+            target.print("2 Player", screen.width/2 - 30, screen.height/2 - -20, 1);
+            target.print("Press A to start", screen.width/2 - 50, screen.height/2 - 20, 1);
 
             let textwidth = "1 Player".length * 6.5;
             let textheight = 8;
@@ -74,11 +74,11 @@ color = c
             // Change the selection box based on the selected player
             if (selectedPlayer === 1) {
                 if (rv === true) {
-                    target.drawRect(60 - padding, 80 - padding, textwidth + (1.5 * padding), textheight + (1.7 * padding), color);
+                    target.drawRect(screen.width/2 - 30 - padding, screen.height/2 - padding, textwidth + (1.5 * padding), textheight + (1.7 * padding), color);
                 }
             } else if (selectedPlayer === 2) {
                 if (rv === true) {
-                    target.drawRect(60 - padding, 96 - padding, textwidth + (1.5 * padding), textheight + (1.7 * padding), color);
+                    target.drawRect(screen.width/2 - 30 - padding, screen.height/2 + 20 - padding, textwidth + (1.5 * padding), textheight + (1.7 * padding), color);
                 }
             }
             }
